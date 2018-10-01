@@ -3,11 +3,15 @@
     <target name="clean">
         <delete dir="CSX-351-HW8/bin"/>
     </target>
-
+	<path id="path.test">
+		<pathelement location="CSX-351-HW8/lib/junit.jar"/>
+		<pathelement location ="CSX-351-HW8/lib/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+	</path>
+	
     <target name="compile">
         <mkdir dir="CSX-351-HW8/bin"/>
 		
-        <javac includeantruntime="false" srcdir="CSX-351-HW8/src" destdir="CSX-351-HW8/bin"/>
+        <javac  classpathref="path.test" includeantruntime="false" srcdir="CSX-351-HW8/src" destdir="CSX-351-HW8/bin"/>
     </target>
 
 <target name="test" depends="compile">
