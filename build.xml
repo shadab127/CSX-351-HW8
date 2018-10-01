@@ -15,7 +15,7 @@
     </target>
 
 <target name="test" depends="compile">
-		<junit printsummary="on" haltonfailure="no">
+		<junit printsummary="on" haltonfailure="yes">
 		<classpath>
 		<pathelement location="CSX-351-HW8/bin"/>
 		<pathelement location="CSX-351-HW8/lib/junit.jar"/>
