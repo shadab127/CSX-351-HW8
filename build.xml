@@ -1,5 +1,5 @@
 <?xml version = "1.0"?>
-<project name = "sample" basedir = "." default = "runJunit">
+<project name = "sample" basedir = "." default = "test">
     <target name="clean">
         <delete dir="CSX-351-HW8/bin"/>
     </target>
@@ -10,7 +10,7 @@
         <javac includeantruntime="false" srcdir="CSX-351-HW8/src" destdir="CSX-351-HW8/bin"/>
     </target>
 
-<target name="runJunit" depends="compile">
+<target name="test" depends="compile">
 		<junit printsummary="on" haltonfailure="no">
 		<classpath>
 		<pathelement location="CSX-351-HW8/bin"/>
