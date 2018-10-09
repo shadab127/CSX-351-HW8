@@ -31,7 +31,11 @@ public class Count
      */
     private static void countUp(int n)
     {
-        // IMPLEMENT THIS RECURSIVE METHOD
+    	int x = n;
+    	n--;
+    	if(n > 0)countUp(n);
+    	System.out.println(x);
+    	return;
      
     }
     
