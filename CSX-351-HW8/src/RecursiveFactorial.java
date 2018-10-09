@@ -36,7 +36,8 @@ public class RecursiveFactorial
     {
         // IMPLEMENT THIS METHOD USING THE RECURSIVE HELPER FUNCTION
         // AND RETURN SOMETHING APPROPRIATE
-        return 0;
+        
+        return helper(n,1);
     }
 
     /**
@@ -49,10 +50,14 @@ public class RecursiveFactorial
 
     private long helper(long n, long partial)
     {
-        long result = 0;
-        // IMPLEMENT THIS TAIL RECURSIVE METHOD
+        if(n > 1)
+        {
+        long result = n*n-1;
+        helper(n-1,result);
+        }
       
-        return result;
+        
+        return partial;
     }
 
 
