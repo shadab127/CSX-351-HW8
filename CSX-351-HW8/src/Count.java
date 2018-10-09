@@ -47,7 +47,10 @@ public class Count
      */
     private static void countDown(int n)
     {
-        // IMPLEMENT THIS RECURSIVE METHOD
+    //recursive method for count down
+    	if(n == 0)return;
+    	System.out.println(n);
+    	countDown(--n);
 
     }
     
